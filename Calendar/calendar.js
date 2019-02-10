@@ -219,6 +219,44 @@ class Calendar {
             var rev = this.now().split('-');
             var currentDay = rev[1] + "-" + rev[2] + "-" + rev[0]; 
             $(element).val(currentDay);
+        } 
+        // Portugal-Brazil Zone.
+        if(language === 'pt-BR') {                  
+            $(function() {
+                $(element).datepicker($.extend({
+                    closeText: 'Fechar',
+                    prevText: '>',
+                    nextText: '<',
+                    currentText: 'Hoje',
+                    monthNames: [                      
+                        'Janeiro', 'Fevereiro', 'Mar&ccedil;o', 'Abril', 'Maio',
+                        'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 
+                        'Dezembro'                       
+                    ],
+                    monthNamesShort: [
+                        'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun',
+                        'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'
+                    ],
+                    dayNames: [
+                        'Domingo', 'Segunda-feira', 'Ter&ccedil;a-feira', 'Quarta-feira', 
+                        'Quinta-feira', 'Sexta-feira', 'Sabado'                     
+                    ],
+                    dayNamesShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+                    dayNamesMin: ['Do', 'Se', 'Te', 'Qa', 'Qi', 'Se', 'Sa'],
+                    weekHeader: 'Semana',
+                    dateFormat: 'dd-nn-yy',
+                    firstDay: 7,
+                    isRTL: false,
+                    showMonthAfterYear: false,
+                    yearSuffix: ''
+                 },
+                 $.datepicker.regional['pt-BR']
+               ));
+            }); 
+            // Adapter Date for Italian zone. 
+            var rev = this.now().split('-');
+            var currentDay = rev[1] + "-" + rev[2] + "-" + rev[0]; 
+            $(element).val(currentDay);
         }        
     }
 }
