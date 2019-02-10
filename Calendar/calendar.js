@@ -168,7 +168,7 @@ class Calendar {
                     dayNamesShort: ['Son', 'Mon', 'Die', 'Mit', 'Don', 'Fre', 'Sam'],
                     dayNamesMin: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'],
                     weekHeader: 'Wochentage',
-                    dateFormat: 'dd-nn-yy',
+                    dateFormat: 'dd-mm-yy',
                     firstDay: 7,
                     isRTL: false,
                     showMonthAfterYear: false,
