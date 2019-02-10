@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Test Calendar</title>
+        <meta name="description" content="Calendar Plugin">
+        <meta autor="Ariel Alejandro Wagner" description="Test for Calendar Plugin">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- jQuery dependences -->
+        <link rel="stylesheet" href="../../jquery/css/jquery-ui.css">
+        <link rel="stylesheet" href="../../jquery/css/style.css">
+        <script src="../../jquery/js/1.12.4/jquery-1.12.4.js"></script>
+        <script src="../../jquery/js/1.12.4/jquery-ui.js"></script>
+        <script src="calendar.js" async defer></script>
+        <script>
+            $(document).ready(function() {
+                
+                //Calendar.setCalendarControl('#txtFecha', 'es');
+                
+                
+                $(document).on('click', '#btn1', function() {
+                    Calendar.setCalendarControl('#txtFechaSpain', 'es');
+                    Calendar.setCalendarControl('#txtFechaEnglish', 'en');
+                    Calendar.setCalendarControl('#txtFechaGermany', 'de');
+                    var fecha = Calendar.now();
+                    $('#dvFecha').html('Fecha: ' + fecha);
+                    return false;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div>
+            <input type="text" id="txtFechaSpain" name="txtFechaSpain" />
+        </div>
+        <div>
+            <input type="text" id="txtFechaEnglish" name="txtFechaEnglish" />
+        </div>     
+        <div>
+            <input type="text" id="txtFechaGermany" name="txtFechaGermany" />
+        </div>         
+        <div>
+            <div id="dvFecha">Traer fecha aquí de hoy...</div>
+            <div><button id="btn1">Fecha Actual</button></div>            
+        </div>
+    </body>
+</html>
